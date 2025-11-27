@@ -1,4 +1,4 @@
-# 🧠 Machine Learning from Scratch (NumPy Implementation)
+# 🧠 Machine Learning from Scratch
 
 > **"What I cannot create, I do not understand." — Richard Feynman**
 
