@@ -2,68 +2,37 @@
 
 > **"What I cannot create, I do not understand." — Richard Feynman**
 
-Este repositório contém implementações puras em Python (via `NumPy`) de algoritmos fundamentais de Machine Learning e Deep Learning. O objetivo deste projeto não é substituir frameworks como PyTorch ou Scikit-Learn, mas sim desconstruir a "caixa preta" para dominar a matemática, a otimização e a vetorização que sustentam a inteligência artificial moderna.
+Este repositório contém implementações puras em Python (via `NumPy`) de algoritmos fundamentais de Machine Learning, Deep Learning e Reinforcement Learning. O objetivo é desconstruir a "caixa preta" de bibliotecas como Scikit-Learn e PyTorch, focando na compreensão profunda da matemática, otimização e estruturas de dados subjacentes.
 
 ---
 
-## 🎯 Objetivo e Filosofia
-Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função de custo ou a estabilidade numérica de uma inversão de matriz é crucial. Este projeto foca em:
-
-1.  **Vetorização Total:** Eliminação de loops `for` desnecessários usando operações matriciais (Broadcasting/Dot Products) para máxima performance.
-2.  **Rigor Matemático:** Implementação fiel das equações de gradiente descendente, *backpropagation* e otimização convexa.
-3.  **Modularidade:** Arquitetura orientada a objetos seguindo a API padrão `fit(X, y)` / `predict(X)`.
+## 🎯 Objetivo
+Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função de custo ou a lógica de convergência de um agente é crucial. Este projeto foca em:
+1.  **Vetorização:** Uso eficiente de álgebra linear para evitar loops.
+2.  **Matemática Explicita:** Derivação manual de gradientes e regras de atualização.
+3.  **Diversidade de Algoritmos:** Do supervisionado clássico (Regressão) ao aprendizado por reforço.
 
 ---
 
-## 🛠️ Algoritmos Implementados
+## 🛠️ Conteúdo do Repositório
 
 ### Supervised Learning
-* **Linear Regression:**
-    * Métodos: OLS (Ordinary Least Squares) via Equação Normal e Gradient Descent.
-    * Regularização: Ridge (L2) e Lasso (L1).
-* **Logistic Regression:**
-    * Otimização via Gradient Descent com função de perda Log-Loss (Binary Cross-Entropy).
-* **Decision Trees (CART):**
-    * Cálculo recursivo de *Information Gain* e *Gini Impurity*.
-* **K-Nearest Neighbors (KNN):**
-    * Cálculo eficiente de distâncias (Euclidiana, Manhattan) vetorizadas.
-* **Support Vector Machines (SVM):**
-    * Otimização usando Hinge Loss e Kernel Trick (RBF/Linear).
+* **01 Logistic Regression:** Classificação binária com função Sigmoid e otimização via Gradient Descent (Log-Loss).
+* **02 Linear Regression:** OLS (Ordinary Least Squares) e Gradient Descent para previsão contínua.
+* **03 Decision Trees:** Implementação recursiva de árvores de decisão (CART/ID3) com cálculo manual de ganho de informação e impureza.
 
 ### Unsupervised Learning
-* **K-Means Clustering:**
-    * Algoritmo de Expectation-Maximization com inicialização aleatória.
-* **Principal Component Analysis (PCA):**
-    * Decomposição de autovalores/autovetores (Eigendecomposition) da matriz de covariância.
+* **04 K-Means Clustering:** Algoritmo de clusterização iterativo (Expectation-Maximization) implementado com distâncias vetorizadas.
 
-### Deep Learning
-* **Multilayer Perceptron (MLP):**
-    * *Forward Pass:* Ativações (Sigmoid, ReLU, Tanh, Softmax).
-    * *Backward Pass:* Implementação manual da regra da cadeia para cálculo de gradientes.
-    * *Otimizadores:* SGD, Momentum, Adam.
+### Deep Learning & NLP
+* **07 Neural Networks:** Construção de uma MLP (Multilayer Perceptron) com *backpropagation* manual (regra da cadeia) e funções de ativação.
+* **05 Sentiment Analysis:** Processamento de linguagem natural (NLP) básico "from scratch" para classificação de texto.
+
+### Applied AI Systems
+* **06 Recommender System:** Motor de recomendação (Filtragem Colaborativa ou Fatoração de Matriz) sem uso de bibliotecas de "black box".
+* **08 Reinforcement Learning:** Agente de aprendizado por reforço (ex: Q-Learning) navegando em um ambiente controlado via equações de Bellman.
 
 ---
-
-## ⚡ Exemplo de Código: Regressão Linear Vetorizada
-
-Um exemplo de como a matemática é traduzida diretamente para operações matriciais eficientes:
-
-```python
-class LinearRegression:
-    def fit(self, X, y):
-        # Adiciona termo de bias (intercept)
-        X = np.c_[np.ones(X.shape[0]), X]
-        
-        # Closed-form solution (Normal Equation): theta = (X.T * X)^-1 * X.T * y
-        # Utiliza pseudo-inversa para estabilidade numérica
-        self.theta = np.linalg.pinv(X.T @ X) @ X.T @ y
-
-    def predict(self, X):
-        X = np.c_[np.ones(X.shape[0]), X]
-        return X @ self.theta
-````
-
------
 
 ## 📐 O "Motor" Matemático
 
@@ -81,33 +50,21 @@ $$
 \frac{\partial J(\theta)}{\partial \theta} = \frac{1}{m} X^T (h_\theta(X) - y)
 $$
 
------
+---
 
 ## 🚀 Como Executar
 
-O projeto utiliza `poetry` (ou `pip`) para gerenciamento de dependências.
+O projeto utiliza bibliotecas mínimas (apenas `numpy` para cálculo e `matplotlib`/`pandas` para dados e plotagem).
 
 ```bash
 # Clone o repositório
 git clone [https://github.com/cockles98/machine-learning-from-scratch.git](https://github.com/cockles98/machine-learning-from-scratch.git)
 
-# Instale as dependências (apenas numpy e matplotlib para visualização)
-pip install -r requirements.txt
+# Instale as dependências
+pip install numpy pandas matplotlib jupyter
 
-# Execute os notebooks de exemplo
-jupyter notebook notebooks/Linear_Regression_Demo.ipynb
-```
+# Execute os notebooks
+jupyter notebook
+````
 
------
-
-## 📊 Comparação de Performance
-
-Benchmarks realizados contra a implementação padrão do `scikit-learn` em datasets sintéticos (100k samples):
-
-| Algoritmo | Tempo (My Implement.) | Tempo (Scikit-Learn) | Acurácia Relativa |
-| :--- | :--- | :--- | :--- |
-| Linear Reg. (Normal Eq) | 0.04s | 0.02s | 100% |
-| Logistic Reg. (GD) | 0.15s | 0.09s | 98.5% |
-| K-Means | 0.32s | 0.12s | 99.0% |
-
-*Nota: O Scikit-learn utiliza rotinas em Cython/C para otimização extrema, mas nossa implementação vetorizada em NumPy mantém performance competitiva para fins educacionais.*
+Abra os arquivos numerados (`01_...`, `02_...`) para ver a implementação passo-a-passo.
