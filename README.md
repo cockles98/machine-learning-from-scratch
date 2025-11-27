@@ -70,10 +70,16 @@ class LinearRegression:
 Por trás do código, o foco está na derivação correta dos gradientes. Exemplo para a Regressão Logística:
 
 A função de custo (Log-Loss):
-$$ J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y^{(i)}\log(h_\theta(x^{(i)})) + (1 - y^{(i)})\log(1 - h_\theta(x^{(i)}))] $$
+
+$$
+J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y^{(i)}\log(h_\theta(x^{(i)})) + (1 - y^{(i)})\log(1 - h_\theta(x^{(i)}))]
+$$
 
 O gradiente vetorizado para atualização dos pesos:
-$$ \frac{\partial J(\theta)}{\partial \theta} = \frac{1}{m} X^T (h_\theta(X) - y) $$
+
+$$
+\frac{\partial J(\theta)}{\partial \theta} = \frac{1}{m} X^T (h_\theta(X) - y)
+$$
 
 -----
 
