@@ -1,5 +1,14 @@
 # 🧠 Machine Learning from Scratch
 
+<div align="center">
+
+![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Status](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
+![Educational](https://img.shields.io/badge/Educational-Project-orange?style=for-the-badge)
+
+</div>
+
 > **"What I cannot create, I do not understand." — Richard Feynman**
 
 Este repositório contém implementações puras em Python (via `NumPy`) de algoritmos fundamentais de Machine Learning, Deep Learning e Reinforcement Learning. O objetivo é desconstruir a "caixa preta" de bibliotecas como Scikit-Learn e PyTorch, focando na compreensão profunda da matemática, otimização e estruturas de dados subjacentes.
@@ -58,7 +67,7 @@ O projeto utiliza bibliotecas mínimas (apenas `numpy` para cálculo e `matplotl
 
 ```bash
 # Clone o repositório
-git clone [https://github.com/cockles98/machine-learning-from-scratch.git](https://github.com/cockles98/machine-learning-from-scratch.git)
+git clone https://github.com/cockles98/machine-learning-from-scratch.git
 
 # Instale as dependências
 pip install numpy pandas matplotlib jupyter
