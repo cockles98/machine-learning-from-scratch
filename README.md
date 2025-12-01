@@ -29,7 +29,7 @@ Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função
 ### 1. Otimização Numérica (Gradient Descent)
 Prova matemática de que a derivada da função de custo (Log-Loss) foi calculada corretamente, resultando em convergência suave.
 <div align="center">
-  <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="600"/>
+  <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="300"/>
 </div>
 
 ### 2. Deep Learning (Neural Networks)
