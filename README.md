@@ -29,7 +29,7 @@ Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função
 ### 1. Supervised Learning (Decision Trees)
 Visualização da fronteira de decisão: o algoritmo recursivo "fatiando" o espaço de dados para classificar regiões complexas.
 <div align="center">
-  <img src="assets/decision_tree.png" alt="Decision Tree Boundary" width="600"/>
+  <img src="assets/decision_boundary.png" alt="Decision Tree Boundary" width="600"/>
 </div>
 
 ### 2. Otimização Numérica (Gradient Descent)
