@@ -23,6 +23,35 @@ Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função
 
 ---
 
+## 📊 Visualização & Convergência
+*Resultados reais gerados pelas implementações deste repositório.*
+
+### 1. Otimização Numérica (Gradient Descent)
+Prova matemática de que a derivada da função de custo (Log-Loss) foi calculada corretamente, resultando em convergência suave.
+<div align="center">
+  <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="600"/>
+</div>
+
+### 2. Deep Learning (Neural Networks)
+Uma MLP (Multilayer Perceptron) treinada do zero classificando dígitos manuscritos (MNIST).
+<div align="center">
+  <img src="assets/mnist_grid.png" alt="MNIST Predictions" width="600"/>
+</div>
+
+### 3. Unsupervised Learning (K-Means)
+Separação geométrica de clusters utilizando distâncias euclidianas vetorizadas.
+<div align="center">
+  <img src="assets/kmeans_clusters.png" alt="K-Means Clustering" width="600"/>
+</div>
+
+### 4. Reinforcement Learning (Q-Learning)
+Evolução de um agente autônomo: a curva mostra a transição da fase de "Exploração" (ruído) para "Exploitation" (estratégia ótima).
+<div align="center">
+  <img src="assets/rl_rewards.png" alt="RL Agent Rewards" width="600"/>
+</div>
+
+---
+
 ## 🛠️ Conteúdo do Repositório
 
 ### Supervised Learning
