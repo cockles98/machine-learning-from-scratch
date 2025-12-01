@@ -67,6 +67,11 @@ Evolução de um agente autônomo: a curva mostra a transição da fase de "Expl
 * **07 Neural Networks:** Construção de uma MLP (Multilayer Perceptron) com *backpropagation* manual (regra da cadeia) e funções de ativação.
 * **05 Sentiment Analysis:** Processamento de linguagem natural (NLP) básico "from scratch" para classificação de texto.
 
+<div align="center">
+  <img src="assets/sentiment_matrix.png" alt="Confusion Matrix" width="400"/>
+  <p><i>Matriz de confusão para análise de sentimento</i></p>
+</div>
+
 ### Applied AI Systems
 * **06 Recommender System:** Motor de recomendação (Filtragem Colaborativa ou Fatoração de Matriz) sem uso de bibliotecas de "black box".
 * **08 Reinforcement Learning:** Agente de aprendizado por reforço (ex: Q-Learning) navegando em um ambiente controlado via equações de Bellman.
