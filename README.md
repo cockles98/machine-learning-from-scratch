@@ -41,7 +41,8 @@ Uma MLP (Multilayer Perceptron) treinada do zero classificando dígitos manuscri
 ### 3. Unsupervised Learning (K-Means)
 Separação geométrica de clusters utilizando distâncias euclidianas vetorizadas.
 <div align="center">
-  <img src="assets/kmeans_clusters.png" alt="K-Means Clustering" width="600"/>
+  <img src="assets/kmeans_clusters_01.png" alt="K-Means Clustering" width="600"/>
+  <img src="assets/kmeans_clusters_02.png" alt="K-Means Clustering" width="600"/>
 </div>
 
 ### 4. Reinforcement Learning (Q-Learning)
