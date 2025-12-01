@@ -1,5 +1,14 @@
 # 🧠 Machine Learning from Scratch
 
+<div align="center">
+
+![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Status](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
+![Educational](https://img.shields.io/badge/Educational-Project-orange?style=for-the-badge)
+
+</div>
+
 > **"What I cannot create, I do not understand." — Richard Feynman**
 
 Este repositório contém implementações puras em Python (via `NumPy`) de algoritmos fundamentais de Machine Learning, Deep Learning e Reinforcement Learning. O objetivo é desconstruir a "caixa preta" de bibliotecas como Scikit-Learn e PyTorch, focando na compreensão profunda da matemática, otimização e estruturas de dados subjacentes.
@@ -11,6 +20,35 @@ Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função
 1.  **Vetorização:** Uso eficiente de álgebra linear para evitar loops.
 2.  **Matemática Explicita:** Derivação manual de gradientes e regras de atualização.
 3.  **Diversidade de Algoritmos:** Do supervisionado clássico (Regressão) ao aprendizado por reforço.
+
+---
+
+## 📊 Visualização & Convergência
+*Resultados reais gerados pelas implementações deste repositório.*
+
+### 1. Otimização Numérica (Gradient Descent)
+Prova matemática de que a derivada da função de custo (Log-Loss) foi calculada corretamente, resultando em convergência suave.
+<div align="center">
+  <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="600"/>
+</div>
+
+### 2. Deep Learning (Neural Networks)
+Uma MLP (Multilayer Perceptron) treinada do zero classificando dígitos manuscritos (MNIST).
+<div align="center">
+  <img src="assets/mnist_grid.png" alt="MNIST Predictions" width="600"/>
+</div>
+
+### 3. Unsupervised Learning (K-Means)
+Separação geométrica de clusters utilizando distâncias euclidianas vetorizadas.
+<div align="center">
+  <img src="assets/kmeans_clusters.png" alt="K-Means Clustering" width="600"/>
+</div>
+
+### 4. Reinforcement Learning (Q-Learning)
+Evolução de um agente autônomo: a curva mostra a transição da fase de "Exploração" (ruído) para "Exploitation" (estratégia ótima).
+<div align="center">
+  <img src="assets/rl_rewards.png" alt="RL Agent Rewards" width="600"/>
+</div>
 
 ---
 
@@ -58,7 +96,7 @@ O projeto utiliza bibliotecas mínimas (apenas `numpy` para cálculo e `matplotl
 
 ```bash
 # Clone o repositório
-git clone [https://github.com/cockles98/machine-learning-from-scratch.git](https://github.com/cockles98/machine-learning-from-scratch.git)
+git clone https://github.com/cockles98/machine-learning-from-scratch.git
 
 # Instale as dependências
 pip install numpy pandas matplotlib jupyter
