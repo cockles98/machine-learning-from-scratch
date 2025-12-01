@@ -26,26 +26,32 @@ Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função
 ## 📊 Visualização & Convergência
 *Resultados reais gerados pelas implementações deste repositório.*
 
-### 1. Otimização Numérica (Gradient Descent)
+### 1. Supervised Learning (Decision Trees)
+Visualização da fronteira de decisão: o algoritmo recursivo "fatiando" o espaço de dados para classificar regiões complexas.
+<div align="center">
+  <img src="assets/decision_tree.png" alt="Decision Tree Boundary" width="600"/>
+</div>
+
+### 2. Otimização Numérica (Gradient Descent)
 Prova matemática de que a derivada da função de custo (Log-Loss) foi calculada corretamente, resultando em convergência suave.
 <div align="center">
   <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="600"/>
 </div>
 
-### 2. Deep Learning (Neural Networks)
-Uma MLP (Multilayer Perceptron) treinada do zero classificando dígitos manuscritos (MNIST).
+### 3. Deep Learning (Neural Networks)
+Uma MLP (Multilayer Perceptron) treinada do zero classificando peças de roupa (Fashion-MNIST).
 <div align="center">
   <img src="assets/mnist_grid.png" alt="MNIST Predictions" width="600"/>
 </div>
 
-### 3. Unsupervised Learning (K-Means)
+### 4. Unsupervised Learning (K-Means)
 Separação geométrica de clusters utilizando distâncias euclidianas vetorizadas.
 <div align="center">
   <img src="assets/kmeans_clusters_01.png" alt="K-Means Clustering" width="300"/>
   <img src="assets/kmeans_clusters_02.png" alt="K-Means Clustering" width="300"/>
 </div>
 
-### 4. Reinforcement Learning (Q-Learning)
+### 5. Reinforcement Learning (Q-Learning)
 Evolução de um agente autônomo: a curva mostra a transição da fase de "Exploração" (ruído) para "Exploitation" (estratégia ótima).
 <div align="center">
   <img src="assets/rl_rewards.png" alt="RL Agent Rewards" width="600"/>
