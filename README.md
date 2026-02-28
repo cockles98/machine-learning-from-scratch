@@ -5,96 +5,93 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![Status](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
-![Educational](https://img.shields.io/badge/Educational-Project-orange?style=for-the-badge)
 
 </div>
 
 > **"What I cannot create, I do not understand." — Richard Feynman**
 
-Este repositório contém implementações puras em Python (via `NumPy`) de algoritmos fundamentais de Machine Learning, Deep Learning e Reinforcement Learning. O objetivo é desconstruir a "caixa preta" de bibliotecas como Scikit-Learn e PyTorch, focando na compreensão profunda da matemática, otimização e estruturas de dados subjacentes.
+Pure Python/NumPy implementations of fundamental Machine Learning, Deep Learning, and Reinforcement Learning algorithms — built without Scikit-Learn, PyTorch, or any black-box library. The goal is to understand what happens beneath the abstractions: how gradients are derived, why optimizers converge, and what the math actually looks like in code.
+
+In quantitative finance and AI research, knowing *why* a cost function behaves a certain way — or how a Q-Learning agent converges to an optimal policy — matters as much as knowing how to call the right API. This repository is an exercise in that kind of understanding.
 
 ---
 
-## 🎯 Objetivo
-Em finanças quantitativas e pesquisa de IA, entender a derivada de uma função de custo ou a lógica de convergência de um agente é crucial. Este projeto foca em:
-1.  **Vetorização:** Uso eficiente de álgebra linear para evitar loops.
-2.  **Matemática Explicita:** Derivação manual de gradientes e regras de atualização.
-3.  **Diversidade de Algoritmos:** Do supervisionado clássico (Regressão) ao aprendizado por reforço.
+## 📊 Visualizations
 
----
+### 1. Supervised Learning — Decision Trees
+Decision boundary visualization: the recursive algorithm partitioning the feature space to classify complex regions.
 
-## 📊 Visualização & Convergência
-*Resultados reais gerados pelas implementações deste repositório.*
-
-### 1. Supervised Learning (Decision Trees)
-Visualização da fronteira de decisão: o algoritmo recursivo "fatiando" o espaço de dados para classificar regiões complexas.
 <div align="center">
   <img src="assets/decision_boundary.png" alt="Decision Tree Boundary" width="600"/>
 </div>
 
-### 2. Otimização Numérica (Gradient Descent)
-Prova matemática de que a derivada da função de custo (Log-Loss) foi calculada corretamente, resultando em convergência suave.
+### 2. Numerical Optimization — Gradient Descent
+Smooth convergence of the Log-Loss cost function, confirming that gradients were derived and implemented correctly.
+
 <div align="center">
   <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="600"/>
 </div>
 
-### 3. Deep Learning (Neural Networks)
-Uma MLP (Multilayer Perceptron) treinada do zero classificando peças de roupa (Fashion-MNIST).
+### 3. Deep Learning — Neural Networks
+A Multilayer Perceptron trained from scratch (manual backpropagation, chain rule) classifying Fashion-MNIST items.
+
 <div align="center">
   <img src="assets/mnist_grid.png" alt="MNIST Predictions" width="600"/>
 </div>
 
-### 4. Unsupervised Learning (K-Means)
-Separação geométrica de clusters utilizando distâncias euclidianas vetorizadas.
+### 4. Unsupervised Learning — K-Means
+Geometric cluster separation using vectorized Euclidean distances — no loops, pure linear algebra.
+
 <div align="center">
   <img src="assets/kmeans_clusters_01.png" alt="K-Means Clustering" width="300"/>
   <img src="assets/kmeans_clusters_02.png" alt="K-Means Clustering" width="300"/>
 </div>
 
-### 5. Reinforcement Learning (Q-Learning)
-Evolução de um agente autônomo: a curva mostra a transição da fase de "Exploração" (ruído) para "Exploitation" (estratégia ótima).
+### 5. Reinforcement Learning — Q-Learning
+Agent reward evolution showing the transition from exploration (noisy early phase) to exploitation (stable optimal policy).
+
 <div align="center">
   <img src="assets/rl_rewards.png" alt="RL Agent Rewards" width="600"/>
 </div>
 
 ---
 
-## 🛠️ Conteúdo do Repositório
+## 🛠️ Repository Contents
 
 ### Supervised Learning
-* **01 Logistic Regression:** Classificação binária com função Sigmoid e otimização via Gradient Descent (Log-Loss).
-* **02 Linear Regression:** OLS (Ordinary Least Squares) e Gradient Descent para previsão contínua.
-* **03 Decision Trees:** Implementação recursiva de árvores de decisão (CART/ID3) com cálculo manual de ganho de informação e impureza.
+- **01 Logistic Regression** — Binary classification with Sigmoid activation and Gradient Descent optimization (Log-Loss)
+- **02 Linear Regression** — OLS (Ordinary Least Squares) and Gradient Descent for continuous prediction
+- **03 Decision Trees** — Recursive CART/ID3 implementation with manual information gain and impurity computation
 
 ### Unsupervised Learning
-* **04 K-Means Clustering:** Algoritmo de clusterização iterativo (Expectation-Maximization) implementado com distâncias vetorizadas.
+- **04 K-Means Clustering** — Iterative Expectation-Maximization with fully vectorized distance computation
 
 ### Deep Learning & NLP
-* **07 Neural Networks:** Construção de uma MLP (Multilayer Perceptron) com *backpropagation* manual (regra da cadeia) e funções de ativação.
-* **05 Sentiment Analysis:** Processamento de linguagem natural (NLP) básico "from scratch" para classificação de texto.
+- **05 Sentiment Analysis** — Basic NLP pipeline for text classification, built from scratch
+- **07 Neural Networks** — MLP with manual backpropagation (chain rule) and configurable activation functions
 
 <div align="center">
   <img src="assets/sentiment_matrix.png" alt="Confusion Matrix" width="400"/>
-  <p><i>Matriz de confusão para análise de sentimento</i></p>
+  <p><i>Confusion matrix for sentiment classification</i></p>
 </div>
 
 ### Applied AI Systems
-* **06 Recommender System:** Motor de recomendação (Filtragem Colaborativa ou Fatoração de Matriz) sem uso de bibliotecas de "black box".
-* **08 Reinforcement Learning:** Agente de aprendizado por reforço (ex: Q-Learning) navegando em um ambiente controlado via equações de Bellman.
+- **06 Recommender System** — Collaborative filtering / matrix factorization without black-box libraries
+- **08 Reinforcement Learning** — Q-Learning agent navigating a controlled environment via Bellman equations
 
 ---
 
-## 📐 O "Motor" Matemático
+## 📐 The Mathematical Engine
 
-Por trás do código, o foco está na derivação correta dos gradientes. Exemplo para a Regressão Logística:
+The focus throughout is on deriving gradients correctly rather than relying on autodiff. Example for Logistic Regression:
 
-A função de custo (Log-Loss):
+Cost function (Log-Loss):
 
 $$
 J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y^{(i)}\log(h_\theta(x^{(i)})) + (1 - y^{(i)})\log(1 - h_\theta(x^{(i)}))]
 $$
 
-O gradiente vetorizado para atualização dos pesos:
+Vectorized gradient for weight update:
 
 $$
 \frac{\partial J(\theta)}{\partial \theta} = \frac{1}{m} X^T (h_\theta(X) - y)
@@ -102,19 +99,19 @@ $$
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Getting Started
 
-O projeto utiliza bibliotecas mínimas (apenas `numpy` para cálculo e `matplotlib`/`pandas` para dados e plotagem).
+Minimal dependencies — only `numpy` for computation and `matplotlib`/`pandas` for data and plotting.
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/cockles98/machine-learning-from-scratch.git
 
-# Instale as dependências
+# Install dependencies
 pip install numpy pandas matplotlib jupyter
 
-# Execute os notebooks
+# Run the notebooks
 jupyter notebook
-````
+```
 
-Abra os arquivos numerados (`01_...`, `02_...`) para ver a implementação passo-a-passo.
+Open the numbered files (`01_...`, `02_...`) to follow each implementation step by step.
