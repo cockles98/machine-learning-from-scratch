@@ -18,28 +18,28 @@ In quantitative finance and AI research, knowing *why* a cost function behaves a
 
 ## 📊 Visualizations
 
-### 1. Supervised Learning — Decision Trees
+### Decision Trees
 Decision boundary visualization: the recursive algorithm partitioning the feature space to classify complex regions.
 
 <div align="center">
   <img src="assets/decision_boundary.png" alt="Decision Tree Boundary" width="600"/>
 </div>
 
-### 2. Numerical Optimization — Gradient Descent
+### Numerical Optimization — Gradient Descent
 Smooth convergence of the Log-Loss cost function, confirming that gradients were derived and implemented correctly.
 
 <div align="center">
   <img src="assets/gradient_descent.png" alt="Gradient Descent Convergence" width="600"/>
 </div>
 
-### 3. Deep Learning — Neural Networks
+### Deep Learning — Neural Networks
 A Multilayer Perceptron trained from scratch (manual backpropagation, chain rule) classifying Fashion-MNIST items.
 
 <div align="center">
   <img src="assets/mnist_grid.png" alt="MNIST Predictions" width="600"/>
 </div>
 
-### 4. Unsupervised Learning — K-Means
+### K-Means
 Geometric cluster separation using vectorized Euclidean distances — no loops, pure linear algebra.
 
 <div align="center">
@@ -47,7 +47,7 @@ Geometric cluster separation using vectorized Euclidean distances — no loops, 
   <img src="assets/kmeans_clusters_02.png" alt="K-Means Clustering" width="300"/>
 </div>
 
-### 5. Reinforcement Learning — Q-Learning
+### Reinforcement Learning — Q-Learning
 Agent reward evolution showing the transition from exploration (noisy early phase) to exploitation (stable optimal policy).
 
 <div align="center">
